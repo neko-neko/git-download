@@ -45,7 +45,7 @@ func main() {
 			defer wg.Done()
 
 			if *include != "" {
-				if strings.Contains(asset.Name, "darwin") {
+				if strings.Contains(asset.Name, *include) {
 					downloadAsset(asset.Id, asset.Name)
 				}
 			} else {
